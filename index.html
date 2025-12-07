@@ -5,26 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yeovil Diyanet Camii</title>
 <style>
-body { margin:0; font-family: Arial,sans-serif; background:#fff; color:#222; }
-header { background:#0a3d62; color:white; text-align:center; padding:20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px; }
+/* GENEL */
+body { margin:0; font-family: Arial,sans-serif; background:#fff; color:#222; line-height:1.5; }
+header { background:#0a3d62; color:white; text-align:center; padding:30px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px; }
 header img { height:120px; }
-header h1 { font-size:48px; font-weight:bold; margin:0; }
-.slider { position:relative; overflow:hidden; width:100%; max-width:900px; margin:20px auto; height:300px; }
+header h1 { font-size:56px; font-weight:bold; margin:0; }
+.container { max-width:1000px; margin:auto; padding:20px; }
+
+/* SLIDER */
+.slider { position:relative; overflow:hidden; width:100%; height:400px; margin:20px auto; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.2);}
 .slides { display:flex; width:400%; animation:slide 16s infinite; }
-.slides img { width:100%; height:300px; object-fit:cover; }
+.slides img { width:100%; height:400px; object-fit:cover; border-radius:15px; }
 @keyframes slide {0%{transform:translateX(0);}20%{transform:translateX(0);}25%{transform:translateX(-100%);}45%{transform:translateX(-100%);}
 50%{transform:translateX(-200%);}70%{transform:translateX(-200%);}75%{transform:translateX(-300%);}95%{transform:translateX(-300%);}100%{transform:translateX(0);}}
-.container { max-width:900px; margin:auto; padding:20px; }
-h2 { border-left:6px solid #0a3d62; padding-left:10px; margin-top:40px; font-size:24px; }
-.program-box, .contact-box, .donation-box, .namaz-box { background:#f7f9fa; padding:20px; border-radius:12px; margin-top:15px; border:1px solid #d9e4ec; }
-.namaz-box table { width:100%; border-collapse:collapse; text-align:center; }
-.namaz-box th, .namaz-box td { border:1px solid #d9e4ec; padding:8px; }
+
+/* BAŞLIKLAR */
+h2 { border-left:8px solid #0a3d62; padding-left:12px; margin-top:40px; font-size:28px; }
+
+/* NAMAZ VAKİTLERİ */
+.namaz-box table { width:100%; border-collapse:collapse; text-align:center; font-size:18px; }
+.namaz-box th, .namaz-box td { border:1px solid #d9e4ec; padding:12px; }
 .namaz-box th { background:#0a3d62; color:white; }
-iframe.map { width:100%; height:300px; border-radius:10px; border:none; margin-top:15px; }
+
+/* PROGRAM */
+.program-box table { width:100%; border-collapse:collapse; font-size:18px; }
+.program-box th, .program-box td { border:1px solid #d9e4ec; padding:10px; text-align:center; }
+.program-box th { background:#0a3d62; color:white; }
+
+/* KUTULAR */
+.program-box, .contact-box, .donation-box, .namaz-box { background:#f7f9fa; padding:20px; border-radius:12px; margin-top:15px; border:1px solid #d9e4ec; }
+iframe.map { width:100%; height:400px; border-radius:12px; border:none; margin-top:15px; }
 .insta { background:#ffe4f2; padding:15px; border-radius:10px; text-align:center; font-size:18px; margin-top:20px; border:1px solid #f7cbe5; }
 .insta a { color:#c32aa3; font-weight:bold; text-decoration:none; }
-footer { background:#0a3d62; color:white; text-align:center; padding:15px; margin-top:40px; }
-@media(max-width:600px){ header h1{display:block;font-size:28px;margin:10px 0;} .slides img{height:200px;} }
+
+/* FOOTER */
+footer { background:#0a3d62; color:white; text-align:center; padding:20px; margin-top:40px; font-size:18px; }
+
+@media(max-width:700px){
+  header h1{font-size:32px;margin:10px 0;}
+  .slides img{height:250px;}
+  h2{font-size:22px;}
+  .namaz-box table, .program-box table{font-size:16px;}
+}
 </style>
 </head>
 <body>
@@ -34,7 +56,7 @@ footer { background:#0a3d62; color:white; text-align:center; padding:15px; margi
 <h1>Yeovil Diyanet Camii</h1>
 </header>
 
-<!-- Slider -->
+<!-- SLIDER -->
 <div class="slider">
 <div class="slides">
 <img src="cami1.jpeg" alt="Cami 1">
@@ -64,14 +86,25 @@ footer { background:#0a3d62; color:white; text-align:center; padding:15px; margi
 
 <h2>📅 Haftalık Program</h2>
 <div class="program-box">
-<b>Pazartesi:</b> 09.30–12.30 Hanımlara İngilizce Dersi<br>
-<b>Salı:</b> 17.30–19.30 Türkçe Dersi, Küçük Erkekler Grup Dersi<br>
-<b>Salı 23.00:</b> Haftalık Sohbet<br>
-<b>Perşembe:</b> 16.30–18.00 Büyük Erkekler Grup Dersi<br>
-<b>Cuma:</b> 12.45 Vaaz • 13.00 Cuma Namazı<br>
-<b>Cumartesi:</b> 11.00–13.00 Türkçe Dersi<br>
-<b>Cumartesi:</b> 13.00–15.00 Küçük Kız/Erkek Grup Dersi<br>
-<b>Pazar:</b> 13.00–15.00 Büyük Kız/Erkek Grup Dersi
+<table>
+<thead>
+<tr>
+<th>Gün</th>
+<th>Saat</th>
+<th>Etkinlik</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Pazartesi</td><td>09:30-12:30</td><td>Hanımlara İngilizce Dersi</td></tr>
+<tr><td>Salı</td><td>17:30-19:30</td><td>Türkçe Dersi & Küçük Erkekler Grup Dersi</td></tr>
+<tr><td>Salı</td><td>23:00</td><td>Haftalık Sohbet</td></tr>
+<tr><td>Perşembe</td><td>16:30-18:00</td><td>Büyük Erkekler Grup Dersi</td></tr>
+<tr><td>Cuma</td><td>12:45-13:00</td><td>Vaaz & Cuma Namazı</td></tr>
+<tr><td>Cumartesi</td><td>11:00-13:00</td><td>Türkçe Dersi</td></tr>
+<tr><td>Cumartesi</td><td>13:00-15:00</td><td>Küçük Kız/Erkek Grup Dersi</td></tr>
+<tr><td>Pazar</td><td>13:00-15:00</td><td>Büyük Kız/Erkek Grup Dersi</td></tr>
+</tbody>
+</table>
 </div>
 
 <h2>📍 Konum</h2>
@@ -100,5 +133,6 @@ Açıklama: Camii Bağış
 Yeovil Diyanet Camii © 2025
 </footer>
 
+</div>
 </body>
 </html>
