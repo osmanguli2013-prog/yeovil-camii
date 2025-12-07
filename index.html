@@ -13,10 +13,19 @@ header h1 { font-size:64px; font-weight:bold; margin:0; color:#fff; text-shadow:
 
 /* SLIDER */
 .slider { position:relative; overflow:hidden; width:100%; height:400px; margin:30px auto; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.25);}
-.slides { display:flex; width:400%; animation:slide 30s infinite; } /* Daha yavaş geçiş */
+.slides { display:flex; width:400%; animation:slide 32s infinite; } /* Yavaş geçiş */
 .slides img { width:100%; height:400px; object-fit:cover; border-radius:15px; }
-@keyframes slide {0%{transform:translateX(0);}25%{transform:translateX(0);}30%{transform:translateX(-100%);}55%{transform:translateX(-100%);}
-60%{transform:translateX(-200%);}85%{transform:translateX(-200%);}90%{transform:translateX(-300%);}100%{transform:translateX(-300%);}}
+@keyframes slide {
+0% {transform:translateX(0);}
+20% {transform:translateX(0);}
+25% {transform:translateX(-100%);}
+45% {transform:translateX(-100%);}
+50% {transform:translateX(-200%);}
+70% {transform:translateX(-200%);}
+75% {transform:translateX(-300%);}
+95% {transform:translateX(-300%);}
+100% {transform:translateX(0);}
+}
 
 /* BAŞLIKLAR */
 h2 { border-left:8px solid #0a3d62; padding-left:12px; margin-top:40px; font-size:32px; color:#0a3d62; }
@@ -79,6 +88,8 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 <tr><td>09/12/2025</td><td>05:25</td><td>06:43</td><td>12:25</td><td>15:54</td><td>18:21</td><td>19:31</td></tr>
 <tr><td>10/12/2025</td><td>05:26</td><td>06:44</td><td>12:25</td><td>15:54</td><td>18:22</td><td>19:32</td></tr>
 <tr><td>11/12/2025</td><td>05:27</td><td>06:45</td><td>12:26</td><td>15:55</td><td>18:23</td><td>19:33</td></tr>
+<tr><td>12/12/2025</td><td>05:28</td><td>06:46</td><td>12:26</td><td>15:55</td><td>18:24</td><td>19:34</td></tr>
+<tr><td>13/12/2025</td><td>05:29</td><td>06:47</td><td>12:26</td><td>15:56</td><td>18:25</td><td>19:35</td></tr>
 </tbody>
 </table>
 </div>
@@ -125,6 +136,7 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 <b>Banka:</b> Lloyds TSB <br>
 <b>Sort Code:</b> 30-65-21 <br>
 <b>Hesap No:</b> 40995760 <br>
+<b>A/C Name:</b> Yeovil Turkish Community <br>
 Açıklama: Camii Bağış
 </div>
 
