@@ -11,8 +11,9 @@ header img { height:130px; }
 header h1 { font-size:64px; font-weight:bold; margin:0; color:#fff; text-shadow:2px 2px 5px rgba(0,0,0,0.3); }
 
 /* SLIDER */
-.slider { position:relative; overflow:hidden; width:100%; height:400px; margin:30px auto; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.25);}
-.slider img { width:100%; height:400px; object-fit:cover; border-radius:15px; display:none; transition:opacity 1s ease-in-out; }
+.slider { position:relative; width:100%; height:400px; overflow:hidden; border-radius:15px; margin:30px 0;}
+.slider img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 1.5s ease-in-out; }
+.slider img.active { opacity:1; }
 
 /* BAŞLIKLAR */
 h2 { border-left:8px solid #0a3d62; padding-left:12px; margin-top:40px; font-size:32px; color:#0a3d62; }
@@ -53,7 +54,7 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 
 <!-- SLIDER -->
 <div class="slider">
-<img src="cami1.jpeg" alt="Cami 1">
+<img src="cami1.jpeg" class="active" alt="Cami 1">
 <img src="cami2.jpeg" alt="Cami 2">
 <img src="cami3.jpeg" alt="Cami 3">
 <img src="cami4.jpeg" alt="Cami 4">
@@ -128,13 +129,13 @@ Yeovil Diyanet Camii © 2025
 <script>
 let slides = document.querySelectorAll('.slider img');
 let current = 0;
-slides[current].style.display = 'block';
+slides[current].classList.add('active');
 
 setInterval(() => {
-  slides[current].style.display = 'none';
+  slides[current].classList.remove('active');
   current = (current + 1) % slides.length;
-  slides[current].style.display = 'block';
-}, 15000); // 15 saniye
+  slides[current].classList.add('active');
+}, 15000); // her resim 15 saniye
 </script>
 
 </body>
