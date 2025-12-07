@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yeovil Diyanet Camii</title>
 <style>
-/* GENEL */
 body { margin:0; font-family: Arial,sans-serif; background:#fff; color:#222; line-height:1.6; }
 header { background:#0a3d62; color:white; text-align:center; padding:40px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:20px; }
 header img { height:130px; }
@@ -13,19 +12,7 @@ header h1 { font-size:64px; font-weight:bold; margin:0; color:#fff; text-shadow:
 
 /* SLIDER */
 .slider { position:relative; overflow:hidden; width:100%; height:400px; margin:30px auto; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.25);}
-.slides { display:flex; width:400%; animation:slide 32s infinite; } /* Yavaş geçiş */
-.slides img { width:100%; height:400px; object-fit:cover; border-radius:15px; }
-@keyframes slide {
-0% {transform:translateX(0);}
-20% {transform:translateX(0);}
-25% {transform:translateX(-100%);}
-45% {transform:translateX(-100%);}
-50% {transform:translateX(-200%);}
-70% {transform:translateX(-200%);}
-75% {transform:translateX(-300%);}
-95% {transform:translateX(-300%);}
-100% {transform:translateX(0);}
-}
+.slider img { width:100%; height:400px; object-fit:cover; border-radius:15px; display:none; transition:opacity 1s ease-in-out; }
 
 /* BAŞLIKLAR */
 h2 { border-left:8px solid #0a3d62; padding-left:12px; margin-top:40px; font-size:32px; color:#0a3d62; }
@@ -51,7 +38,7 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 
 @media(max-width:700px){
   header h1{font-size:36px;margin:10px 0;}
-  .slides img{height:250px;}
+  .slider img{height:250px;}
   h2{font-size:26px;}
   .namaz-box table, .program-box table{font-size:18px;}
 }
@@ -66,12 +53,10 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 
 <!-- SLIDER -->
 <div class="slider">
-<div class="slides">
 <img src="cami1.jpeg" alt="Cami 1">
 <img src="cami2.jpeg" alt="Cami 2">
 <img src="cami3.jpeg" alt="Cami 3">
 <img src="cami4.jpeg" alt="Cami 4">
-</div>
 </div>
 
 <div class="container">
@@ -98,11 +83,7 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 <div class="program-box">
 <table>
 <thead>
-<tr>
-<th>Gün</th>
-<th>Saat</th>
-<th>Etkinlik</th>
-</tr>
+<tr><th>Gün</th><th>Saat</th><th>Etkinlik</th></tr>
 </thead>
 <tbody>
 <tr><td>Pazartesi</td><td>09:30-12:30</td><td>Hanımlara İngilizce Dersi</td></tr>
@@ -144,6 +125,17 @@ Açıklama: Camii Bağış
 Yeovil Diyanet Camii © 2025
 </footer>
 
-</div>
+<script>
+let slides = document.querySelectorAll('.slider img');
+let current = 0;
+slides[current].style.display = 'block';
+
+setInterval(() => {
+  slides[current].style.display = 'none';
+  current = (current + 1) % slides.length;
+  slides[current].style.display = 'block';
+}, 15000); // 15 saniye
+</script>
+
 </body>
 </html>
