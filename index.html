@@ -11,7 +11,7 @@ header img { height:130px; }
 header h1 { font-size:64px; font-weight:bold; margin:0; color:#fff; text-shadow:2px 2px 5px rgba(0,0,0,0.3); }
 
 /* SLIDER */
-.slider { position:relative; width:100%; height:500px; overflow:hidden; border-radius:15px; margin:30px 0; }
+.slider { position:relative; width:100%; height:350px; overflow:hidden; border-radius:15px; margin:30px 0; }
 .slider img { 
   position:absolute; 
   top:0; left:0; 
@@ -46,7 +46,7 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 
 @media(max-width:700px){
   header h1{font-size:36px;margin:10px 0;}
-  .slider img{height:250px;}
+  .slider { height:200px; }
   h2{font-size:26px;}
   .namaz-box table, .program-box table{font-size:18px;}
 }
@@ -94,14 +94,11 @@ footer { background:#0a3d62; color:white; text-align:center; padding:25px; margi
 <tr><th>Gün</th><th>Saat</th><th>Etkinlik</th></tr>
 </thead>
 <tbody>
-<tr><td>Pazartesi</td><td>09:30-12:30</td><td>Hanımlara İngilizce Dersi</td></tr>
-<tr><td>Salı</td><td>17:30-19:30</td><td>Türkçe Dersi & Küçük Erkekler Grup Dersi</td></tr>
-<tr><td>Salı</td><td>23:00</td><td>Haftalık Sohbet</td></tr>
-<tr><td>Perşembe</td><td>16:30-18:00</td><td>Büyük Erkekler Grup Dersi</td></tr>
-<tr><td>Cuma</td><td>12:45-13:00</td><td>Vaaz & Cuma Namazı</td></tr>
-<tr><td>Cumartesi</td><td>11:00-13:00</td><td>Türkçe Dersi</td></tr>
-<tr><td>Cumartesi</td><td>13:00-15:00</td><td>Küçük Kız/Erkek Grup Dersi</td></tr>
-<tr><td>Pazar</td><td>13:00-15:00</td><td>Büyük Kız/Erkek Grup Dersi</td></tr>
+<tr><td>Pazartesi</td><td>09:30-12:30</td><td>Hanımlara Özel İngilizce Dersi</td></tr>
+<tr><td>Salı</td><td>17:30-19:30</td><td>Küçük Erkekler Grubu Cami Dersi</td></tr>
+<tr><td>Perşembe</td><td>16:30-18:00</td><td>Büyük Erkekler Grubu Cami Dersi</td></tr>
+<tr><td>Cumartesi</td><td>13:00-15:00</td><td>Küçük Kız/Erkek Grupları Cami Dersi</td></tr>
+<tr><td>Pazar</td><td>13:00-15:00</td><td>Büyük Kız/Erkek Grupları Cami Dersi</td></tr>
 </tbody>
 </table>
 </div>
@@ -142,7 +139,7 @@ setInterval(() => {
   slides[current].classList.remove('active');
   current = (current + 1) % slides.length;
   slides[current].classList.add('active');
-}, 15000); // her resim 15 saniye
+}, 15000); // 15 saniye
 </script>
 
 </body>
